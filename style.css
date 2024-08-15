@@ -331,6 +331,13 @@ form {
 
 
 @media screen and (max-width: 1125px) {
+    body {
+        background-color: var(--bg-color);
+        color: var(--input-label-color);
+        padding: 0px;
+        height: auto;
+    }
+    
     .container {
         display: flex;
         flex-direction: column;
@@ -343,6 +350,13 @@ form {
 }
 
 @media screen and (max-width: 800px) {
+    body {
+        background-color: var(--bg-color);
+        padding: 0px;
+        height: auto;
+        color: var(--input-label-color);
+    }
+
     .container {
         display: flex;
         flex-direction: column;
