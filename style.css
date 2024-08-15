@@ -1,6 +1,8 @@
 :root {
-    --transparency: 0.3;
+    --transparency: 0.4;
     --transparency2: 0.65;
+    --transparency3: 0.15;
+    --transparency4: 0.85;
     --bg-color: #171717;
     --input-label-color: #ffffff;
     --border-color: #ffffff9e;
@@ -55,13 +57,13 @@ body {
     background-repeat: no-repeat;
     background-blend-mode:darken;
     background-size: 1000px;
-    flex: 2 1 auto;
+    flex: 1 1 40%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    animation-name: moving-rainbow;
+    animation-name: moving-rainbow-logo;
     animation-iteration-count: infinite;
-    animation-duration: 6.66s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-direction: alternate;
     text-shadow: #ffffff 0px 0px 50px;
@@ -75,8 +77,9 @@ body {
 }
 
 .sign-up-sec {
-    flex: 3 1 auto;
+    flex: 1 1 65%;
     display: flex;
+    padding: 2rem;
     flex-direction: column;
     justify-content: center;
     background-color: var(--form-contain-color);
@@ -95,9 +98,7 @@ body {
     font-family: desporm;
     letter-spacing: 0.55ch;
     font-size: 1.25rem;
-    position: absolute;
     top: 30%;
-    left: 10%;
     justify-content: center;
     align-items: center;
 }
@@ -143,21 +144,31 @@ a {
     padding: 2px;
     background-image: var(--input-bg-color);
     border-radius: 5px;
-    animation-name: moving-rainbow;
+    animation-name: moving-rainbow-input;
     animation-iteration-count: infinite;
     animation-duration: 6.66s;
     animation-timing-function: ease;
     animation-direction: alternate;
 }
 
-@keyframes moving-rainbow {
-    0% {background-color: rgba(255, 0, 0, 0.5);}
-    16.67% {background-color: rgba(255, 166, 0, 0.5);}
-    33.33% {background-color: rgba(255, 255, 0, 0.5);}
-    50% {background-color: rgba(0, 128, 0, 0.47);}
-    66.67% {background-color: rgba(173, 216, 230, 0.5);}
-    83.34% {background-color: rgba(0, 0, 255, 0.5);}
-    100% {background-color:  rgba(128, 0, 128, 0.5);}
+@keyframes moving-rainbow-logo {
+    0% {background-color: rgba(255, 0, 0, var(--transparency3));}
+    16.67% {background-color: rgba(255, 166, 0, var(--transparency3));}
+    33.33% {background-color: rgba(255, 255, 0, var(--transparency3));}
+    50% {background-color: rgba(0, 128, 0, 0.47, var(--transparency3));}
+    66.67% {background-color: rgba(173, 216, 230, var(--transparency3));}
+    83.34% {background-color: rgba(0, 0, 255, var(--transparency3));}
+    100% {background-color:  rgba(128, 0, 128, var(--transparency3));}
+}
+
+@keyframes moving-rainbow-input {
+    0% {background-color: rgba(255, 0, 0, var(--transparency4));}
+    16.67% {background-color: rgba(255, 166, 0, var(--transparency4));}
+    33.33% {background-color: rgba(255, 255, 0, var(--transparency4));}
+    50% {background-color: rgba(0, 128, 0, 0.47, var(--transparency4));}
+    66.67% {background-color: rgba(173, 216, 230, var(--transparency4));}
+    83.34% {background-color: rgba(0, 0, 255, var(--transparency4));}
+    100% {background-color:  rgba(128, 0, 128, var(--transparency4));}
 }
 
 input {
@@ -179,4 +190,33 @@ label {
 
 button[type="submit"] {
     margin: 3rem;
+}
+
+.slogan {
+    font-family: desporm;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+.red {
+    text-shadow: 0px 0px 10px red;
+}
+.orange {
+    text-shadow: 0px 0px 10px orange;
+}
+.yellow {
+    text-shadow: 0px 0px 10px yellow;
+}
+.green {
+    text-shadow: 0px 0px 10px green;
+}
+.cyan {
+    text-shadow: 0px 0px 10px cyan;
+}
+.blue {
+    text-shadow: 0px 0px 10px blue;
+}
+.purple {
+    text-shadow: 0px 0px 10px purple;
 }
