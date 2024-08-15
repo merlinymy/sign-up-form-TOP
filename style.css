@@ -1,17 +1,18 @@
 :root {
     --transparency: 0.4;
     --transparency2: 0.65;
-    --transparency3: 0.15;
+    --transparency3: 0.35;
     --transparency4: 0.85;
-    --bg-color: #171717;
+    --bg-color: #020202;
     --input-label-color: #ffffff;
     --border-color: #ffffff9e;
     --ref-font-size: 0.65rem;
     --logo-title-color: #606060;
     --logo-div-bg-color: linear-gradient(0deg, rgba(255, 0, 0,var(--transparency2)), rgba(255, 165, 0, var(--transparency2)), rgba(248, 248, 26, var(--transparency2)), rgba(0, 128, 0, var(--transparency2)), rgba(173, 216, 230, var(--transparency2)), rgba(0, 0, 255, var(--transparency2)), rgba(128, 0, 128, var(--transparency2)));
     --input-bg-color: linear-gradient(45deg, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)), rgba(173, 216, 230, var(--transparency)), rgba(0, 0, 255, var(--transparency)), rgba(128, 0, 128, var(--transparency)));
-    --form-bg-color: #3e3e3e;
-    --form-contain-color: #292929;
+    --login-bg-color: linear-gradient(45deg, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)));
+    --form-bg-color: #202020;
+    --form-contain-color: #0e0e0e;
 }
 
 @font-face {
@@ -65,7 +66,7 @@ body {
     animation-iteration-count: infinite;
     animation-duration: 3s;
     animation-timing-function: ease;
-    animation-direction: alternate;
+    animation-direction:alternate-reverse;
     text-shadow: #ffffff 0px 0px 50px;
 }
 
@@ -78,10 +79,12 @@ body {
 
 .sign-up-sec {
     flex: 1 1 65%;
+    position: relative;
     display: flex;
-    padding: 2rem;
+    padding: 1.75rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 4rem;
     background-color: var(--form-contain-color);
 }
 
@@ -109,16 +112,18 @@ body {
     padding: 0.55rem 0rem;
 }
 
-a {
+.ref > a {
     color: var(--input-label-color);
 }
 
 .form-wrapper {
     background-color: var(--form-bg-color);
-    padding: 2rem 3rem;
+    padding: 1rem 1.75rem 2.75rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: space-evenly;
+    border-radius: 5px;
 }
 
 .form-wrapper > div {
@@ -132,6 +137,11 @@ a {
     gap: 0.2rem;
     flex-direction: column;
     justify-content: flex-start;
+    flex: 1 1 auto;
+}
+
+input {
+    width: 100%;
 }
 
 .input-wrapper {
@@ -152,13 +162,13 @@ a {
 }
 
 @keyframes moving-rainbow-logo {
-    0% {background-color: rgba(255, 0, 0, var(--transparency3));}
-    16.67% {background-color: rgba(255, 166, 0, var(--transparency3));}
-    33.33% {background-color: rgba(255, 255, 0, var(--transparency3));}
+    from {background-color: rgba(255, 0, 0, var(--transparency3));}
+    /* 16.67% {background-color: rgba(255, 166, 0, var(--transparency3));}
+    33.33% {background-color: rgba(255, 255, 0, var(--transparency3));} */
     50% {background-color: rgba(0, 128, 0, 0.47, var(--transparency3));}
-    66.67% {background-color: rgba(173, 216, 230, var(--transparency3));}
-    83.34% {background-color: rgba(0, 0, 255, var(--transparency3));}
-    100% {background-color:  rgba(128, 0, 128, var(--transparency3));}
+    /* 66.67% {background-color: rgba(173, 216, 230, var(--transparency3));}
+    83.34% {background-color: rgba(0, 0, 255, var(--transparency3));} */
+    to {background-color:  rgba(128, 0, 128, var(--transparency3));}
 }
 
 @keyframes moving-rainbow-input {
@@ -188,15 +198,11 @@ label {
 
 }
 
-button[type="submit"] {
-    margin: 3rem;
-}
-
 .slogan {
     font-family: desporm;
     font-size: 3rem;
     letter-spacing: 3px;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .red {
@@ -219,4 +225,86 @@ button[type="submit"] {
 }
 .purple {
     text-shadow: 0px 0px 10px purple;
+}
+
+.start-lifting {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-family: desporm;
+}
+
+.button-and-login {
+    margin-left: 1.75rem;
+    display: flex;
+    gap: 4rem;
+}
+
+button[type="button"] {
+    height: 1.75rem;
+    width: 9rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--form-bg-color);
+    color: var(--input-label-color);
+}
+
+button[type="button"]:active {
+    height: 1.75rem;
+    width: 9rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--input-label-color);
+    color: var(--form-bg-color);
+}
+
+.button-wrapper {
+    background: var(--border-color);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.button-wrapper:hover {
+    background: var(--input-bg-color);
+    padding: 3px;
+    border-radius: 3px;
+    animation-name: moving-rainbow-input;
+    animation-iteration-count: infinite;
+    animation-duration: 6.66s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+}
+
+.button-and-login > p {
+    align-self: center;
+}
+
+.social-media {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    gap: 1rem;
+    filter: invert(1);
+}
+
+img[alt$="-icon"] {
+    width: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.button-and-login > p {
+    font-size: 1.125rem;
+}
+
+.button-and-login > p > span > a {
+    background: var(--login-bg-color);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.25rem;
+    font-weight: bolder;
 }
