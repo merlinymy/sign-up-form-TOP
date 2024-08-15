@@ -30,11 +30,12 @@ body {
     background-color: var(--bg-color);
     color: var(--input-label-color);
     padding: 0 10%;
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    height: 100vh;
+
     justify-content: center;
 }
 
@@ -138,6 +139,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     flex: 1 1 auto;
+    position: relative;
 }
 
 input {
@@ -145,8 +147,14 @@ input {
 }
 
 .input-wrapper {
-    padding: 2px;
+    padding: 3px;
     background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.input-wrapper-invalid {
+    padding: 3px;
+    background-color: red;
     border-radius: 5px;
 }
 
@@ -196,6 +204,15 @@ label {
     font-size: 0.75rem;
     letter-spacing: 0.125rem;
 
+}
+
+.error {
+    font-size: 0.65rem;
+    color: red;
+    margin-bottom: -1rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 
 .slogan {
