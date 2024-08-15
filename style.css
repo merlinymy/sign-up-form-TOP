@@ -146,12 +146,12 @@ input {
 
 .input-wrapper {
     padding: 2px;
-    background-color: #E5E7EB;
+    background-color: #ffffff;
     border-radius: 5px;
 }
 
 .input-wrapper:focus-within {
-    padding: 2px;
+    padding: 3px;
     background-image: var(--input-bg-color);
     border-radius: 5px;
     animation-name: moving-rainbow-input;
@@ -182,7 +182,7 @@ input {
 }
 
 input {
-    border: 1px solid #E5E7EB;
+    border: none;
     border-radius: 3px;
     height: 1.5rem;
     padding: 1px;
