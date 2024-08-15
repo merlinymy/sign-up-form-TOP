@@ -4,6 +4,18 @@ let email = document.querySelector("#email");
 let phoneNum = document.querySelector("#phone-num");
 let password = document.querySelector("#password");
 let confirmPass = document.querySelector("#confirm-pass");
+let submitBtn = document.querySelector(".button-wrapper > button");
+let form = document.querySelector("form");
+
+submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (confirmPass.value !== password.value) {
+        confirmPass.parentElement.className="input-wrapper-invalid";
+        getErrorMsgSpan(confirmPass).textContent = "password does not match";
+    } else {
+        form.reset();
+    }
+});
 
 function getErrorMsgSpan(inputElement) {
     return inputElement.parentElement.nextElementSibling;
@@ -87,5 +99,8 @@ confirmPass.addEventListener("focusout", () => {
     if (confirmPass.value !== password.value) {
         confirmPass.parentElement.className="input-wrapper-invalid";
         getErrorMsgSpan(confirmPass).textContent = "password does not match";
+    } else {
+        confirmPass.parentElement.className = "input-wrapper";
+        getErrorMsgSpan(confirmPass).textContent = "";
     }
 })

@@ -13,6 +13,7 @@
     --login-bg-color: linear-gradient(45deg, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)));
     --form-bg-color: #202020;
     --form-contain-color: #0e0e0e;
+    --slogan-font-size:calc(2.25vw + 1rem);
 }
 
 @font-face {
@@ -35,7 +36,7 @@ body {
 
 .container {
     display: flex;
-
+    /* height: 100vh; */
     justify-content: center;
 }
 
@@ -85,7 +86,7 @@ body {
     padding: 1.75rem;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 4rem;
+    gap: 2.25rem;
     background-color: var(--form-contain-color);
 }
 
@@ -217,7 +218,7 @@ label {
 
 .slogan {
     font-family: desporm;
-    font-size: 3rem;
+    font-size: var(--slogan-font-size);
     letter-spacing: 3px;
     margin-top: 2rem;
 }
@@ -252,11 +253,12 @@ label {
 
 .button-and-login {
     margin-left: 1.75rem;
+    margin-bottom: 2rem;
     display: flex;
     gap: 4rem;
 }
 
-button[type="button"] {
+button[type="submit"] {
     height: 1.75rem;
     width: 9rem;
     border: none;
@@ -265,7 +267,7 @@ button[type="button"] {
     color: var(--input-label-color);
 }
 
-button[type="button"]:active {
+button[type="submit"]:active {
     height: 1.75rem;
     width: 9rem;
     border: none;
@@ -277,6 +279,7 @@ button[type="button"]:active {
 .button-wrapper {
     background: var(--border-color);
     padding: 3px;
+    height: 2.15rem;
     border-radius: 3px;
 }
 
@@ -311,17 +314,71 @@ img[alt$="-icon"] {
 form {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .button-and-login > p {
-    font-size: 1.125rem;
+    font-size: calc(1.125vw + 0.35rem);
 }
 
 .button-and-login > p > span > a {
     background: var(--login-bg-color);
     background-clip: text;
     color: transparent;
-    font-size: 1.25rem;
+    font-size: calc(1.25vw + 0.35rem);
     font-weight: bolder;
+}
+
+
+@media screen and (max-width: 1125px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-bg {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-bg {
+        display:none;
+    }
+
+    .form-wrapper > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    .form-wrapper > div > div {
+        display: flex;
+        gap: 0.2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        position: relative;
+    }
+    
+}
+
+img[alt$="-icon"]:hover {
+    filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+    animation-name: onhover;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes onhover {
+    from {filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));}
+    to {filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));}
 }
