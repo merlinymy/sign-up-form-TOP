@@ -28,6 +28,8 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
     background-color: var(--bg-color);
     color: var(--input-label-color);
     padding: 0 10%;
@@ -36,22 +38,10 @@ body {
 
 .container {
     display: flex;
+    align-self: center;
     /* height: 100vh; */
     justify-content: center;
 }
-
-/* .image-bg {
-    position: relative;
-    background-image: var(--logo-div-bg-color),
-                      url(assets/photos/workout-equipment.jpg);
-    background-repeat: no-repeat;
-    background-size: 1000px;
-    flex: 2 1 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    text-shadow: #171717 2px 2px 10px;
-} */
 
 .image-bg {
     position: relative;
