@@ -8,9 +8,9 @@
     --border-color: #ffffff9e;
     --ref-font-size: 0.65rem;
     --logo-title-color: #606060;
-    --logo-div-bg-color: linear-gradient(0deg, rgba(255, 0, 0,var(--transparency2)), rgba(255, 165, 0, var(--transparency2)), rgba(248, 248, 26, var(--transparency2)), rgba(0, 128, 0, var(--transparency2)), rgba(173, 216, 230, var(--transparency2)), rgba(0, 0, 255, var(--transparency2)), rgba(128, 0, 128, var(--transparency2)));
-    --input-bg-color: linear-gradient(45deg, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)), rgba(173, 216, 230, var(--transparency)), rgba(0, 0, 255, var(--transparency)), rgba(128, 0, 128, var(--transparency)));
-    --login-bg-color: linear-gradient(45deg, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)));
+    --logo-div-bg-color: linear-gradient(0deg in lch, rgba(255, 0, 0,var(--transparency2)), rgba(255, 165, 0, var(--transparency2)), rgba(248, 248, 26, var(--transparency2)), rgba(0, 128, 0, var(--transparency2)), rgba(173, 216, 230, var(--transparency2)), rgba(0, 0, 255, var(--transparency2)), rgba(128, 0, 128, var(--transparency2)));
+    --input-bg-color: linear-gradient(45deg in lch, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)), rgba(173, 216, 230, var(--transparency)), rgba(0, 0, 255, var(--transparency)), rgba(128, 0, 128, var(--transparency)));
+    --login-bg-color: linear-gradient(45deg in lch, rgba(255, 0, 0, var(--transparency)), rgba(255, 165, var(--transparency)), rgba(248, 248, 26, var(--transparency)), rgba(0, 128, 0, var(--transparency)));
     --form-bg-color: #202020;
     --form-contain-color: #0e0e0e;
     --slogan-font-size:calc(2.25vw + 1rem);
